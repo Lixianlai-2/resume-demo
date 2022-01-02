@@ -8,7 +8,7 @@ demo.innerHTML = string[0];
 const step = function () {
   n = n + 1;
   console.log(n);
-  if (n < string.length) {
+  if (n <= string.length) {
     setTimeout(() => {
       demo.innerHTML = string[n];
       step();
