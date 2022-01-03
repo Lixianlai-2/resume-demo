@@ -3,20 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
     <title>李先来的简历</title>
   </head>
   <body>
-    测试1
-    <div id="div1"></div>
+    <div id="html"></div>
 
-    <span id="demo"></span>
+    <div id="divWrapper">
+      <div id="div1"></div>
+    </div>
+
     <style id="style"></style>
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      #divWrapper {
+        position: relative;
+      }
+
       #div1 {
         position: fixed;
-        right: 20px;
-        top: 20px;
+        right: 50%;
+        transform: translateX(50%);
+        top: 40px;
       }
 
       #div1::before {
@@ -24,6 +40,7 @@
         /* border: 1px solid blue; */
         display: block;
         position: absolute;
+        box-sizing: border-box;
       }
 
       #div1::after {
@@ -31,6 +48,28 @@
         /* border: 1px solid red; */
         display: block;
         position: absolute;
+        box-sizing: border-box;
+      }
+
+      #html {
+        word-break: break-all;
+      }
+
+      @media (max-width: 500px) {
+        #html {
+          height: 50vh;
+          /* 让溢出的部分还是保持在上面那一半 */
+          overflow: hidden;
+        }
+
+        #divWrapper {
+          height: 50vh;
+          position: relative;
+        }
+
+        #div1 {
+          position: absolute;
+        }
       }
     </style>
 

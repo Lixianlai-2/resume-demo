@@ -1,17 +1,18 @@
-let demo = document.querySelector("#demo");
+let html = document.querySelector("#html");
 let style = document.querySelector("#style");
 
 let string = `/*你好，我是一名前端新人，
 *现在开始打印一个正方体，并放到右边
 *#div1{
-*  width:400px;
-* height:400px;
+*  width:200px;
+* height:200px;
 *}
 */
 #div1 {
   border: 1px solid blue;
-  width:400px;
-  height:400px;
+  width:200px;
+  height:200px;
+  
   }
 /*
 * 接下来我把它放到右边并变为圆形
@@ -34,8 +35,8 @@ let string = `/*你好，我是一名前端新人，
 
 
 #div1::before {
-  width:200px;
-  height:200px;
+  width:100px;
+  height:100px;
   top:0;
   left:50%;
   border-radius:50%;
@@ -45,8 +46,8 @@ let string = `/*你好，我是一名前端新人，
 }
 
 #div1::after {
-  width:200px;
-  height:200px;
+  width:100px;
+  height:100px;
   bottom:0;
   left:50%;
   border-radius:50%;
@@ -71,8 +72,10 @@ const step = function () {
       console.log(n);
       string2 += string[n];
     }
-    demo.innerHTML = string2;
+    html.innerHTML = string2;
     style.innerHTML = string.substring(0, n);
+    html.scrollTo(0, 99999); // 手机端滚动
+    html.scrollIntoView(false); // 电脑端滚动
 
     // string.length等于60，当n等于58时
     if (n < string.length - 1) {
@@ -81,7 +84,7 @@ const step = function () {
       console.log(string2);
       step();
     }
-  }, 10);
+  }, 1);
 };
 
 step();
