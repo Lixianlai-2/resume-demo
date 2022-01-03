@@ -28,6 +28,33 @@ let string = `/*你好，我是一名前端新人，
 }
 /*接下来将其变为一左一右黑白颜色
 */
+#div1 {
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 50%);
+}
+
+
+#div1::before {
+  width:200px;
+  height:200px;
+  top:0;
+  left:50%;
+  border-radius:50%;
+  background:#fff;
+  transform:translateX(-50%);
+  background: radial-gradient(circle, rgba(0,0,0,1) 7%, rgba(255,255,255,1) 7%, rgba(255,255,255,1) 100%);
+}
+
+#div1::after {
+  width:200px;
+  height:200px;
+  bottom:0;
+  left:50%;
+  border-radius:50%;
+  background:#000;
+  transform:translateX(-50%);
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 7%, rgba(0,0,0,1) 7%);
+
+}
 `;
 
 let n = 0;
