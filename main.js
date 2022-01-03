@@ -7,12 +7,10 @@ body{
 }
 `;
 
-// string = string.replace(/\n/g, "<br>");
-let n = -1;
+let n = 0;
 let string2 = "";
 
 const step = function () {
-  n = n + 1;
   setTimeout(() => {
     if (string[n] === "\n") {
       console.log("这一行有执行吗？");
@@ -22,7 +20,10 @@ const step = function () {
       string2 += string[n];
     }
     demo.innerHTML = string2;
-    if (n <= string.length) {
+    // string.length等于60，当n等于58时
+    if (n < string.length - 1) {
+      // n等于59，n是下标，所以string2[59]刚好打印最后一位
+      n = n + 1;
       console.log(string2);
       step();
     }
