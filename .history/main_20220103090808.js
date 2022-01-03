@@ -8,7 +8,7 @@ let n = 0;
 const step = function () {
   n = n + 1;
   console.log(n);
-  if (n <= string.length) {
+  if (n - 1 < string.length) {
     setTimeout(() => {
       //   demo.innerHTML = string[n];
       demo.innerHTML = string.substring(0, n);
