@@ -196,3 +196,7 @@ step();
 #### 如何解决手机模式下太极图显示不全的问题
 
 - 设置媒体查询
+
+## 部署到 GitHubPages
+
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/25396806/1641222697799-bee40326-54df-493e-864d-fa14bee7db26.png?x-oss-process=image%2Fresize%2Cw_1500%2Climit_0)
