@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#divWrapper {
+  position: relative;
+}
+
+#div1 {
+  position: fixed;
+  right: 50%;
+  transform: translateX(50%);
+  top: 40px;
+}
+
+#div1::before {
+  content: "";
+  /* border: 1px solid blue; */
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+#div1::after {
+  content: "";
+  /* border: 1px solid red; */
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+#html {
+  word-break: break-all;
+}
+
+@media (max-width: 500px) {
+  #html {
+    height: 50vh;
+    /* 让溢出的部分还是保持在上面那一半 */
+    overflow: hidden;
+  }
+
+  #divWrapper {
+    height: 50vh;
+    position: relative;
+  }
+
+  #div1 {
+    position: absolute;
+  }
+}

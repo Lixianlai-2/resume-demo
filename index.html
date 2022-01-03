@@ -7,6 +7,7 @@
       name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
+    <link rel="stylesheet" href="./style.css" />
     <title>李先来的简历</title>
   </head>
   <body>
@@ -17,62 +18,7 @@
     </div>
 
     <style id="style"></style>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
 
-      #divWrapper {
-        position: relative;
-      }
-
-      #div1 {
-        position: fixed;
-        right: 50%;
-        transform: translateX(50%);
-        top: 40px;
-      }
-
-      #div1::before {
-        content: "";
-        /* border: 1px solid blue; */
-        display: block;
-        position: absolute;
-        box-sizing: border-box;
-      }
-
-      #div1::after {
-        content: "";
-        /* border: 1px solid red; */
-        display: block;
-        position: absolute;
-        box-sizing: border-box;
-      }
-
-      #html {
-        word-break: break-all;
-      }
-
-      @media (max-width: 500px) {
-        #html {
-          height: 50vh;
-          /* 让溢出的部分还是保持在上面那一半 */
-          overflow: hidden;
-        }
-
-        #divWrapper {
-          height: 50vh;
-          position: relative;
-        }
-
-        #div1 {
-          position: absolute;
-        }
-      }
-    </style>
-
-    <script src="/main.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>
