@@ -1,23 +1,39 @@
 let demo = document.querySelector("#demo");
 let style = document.querySelector("#style");
 
-// let string = `/*你好，我是一名前端新人，
-// *现在开始打印CSS内容，
-// *body{
-// *  color:blue;
-// *}
-// */
-// body {
-//  background-color:red;
-// }
-// `;
-
-let string = `你好，我是一名前端新人，
-现在开始打印CSS内容， 
-body{
-  color:blue;
+let string = `/*你好，我是一名前端新人，
+*现在开始打印CSS内容，
+*#div1{
+*  width:400px;
+* height:400px;
+*}
+*/
+#div1 {
+  border: 1px solid blue;
+  width:400px;
+  height:400px;
+  }
+/*
+* 接下来我把div变成一个正方形
+*# div1 {
+*  border-radius:50%;
+*  box-shadow:0 0 3px rgba(0, 0, 0, 0.5);
+*  border:none;
+}
+*/
+#div1 {
+  border-radius:50%;
+  box-shadow:0 0 3px rgba(0, 0, 0, 0.5);
+  border:none;
 }
 `;
+
+// let string = `你好，我是一名前端新人，
+// 现在开始打印CSS内容，
+// body{
+//   color:blue;
+// }
+// `;
 
 let n = 0;
 let string2 = "";
@@ -40,7 +56,7 @@ const step = function () {
       string2 += string[n];
     }
     demo.innerHTML = string2;
-    // style.innerHTML = string2;
+    style.innerHTML = string.substring(0, n);
 
     // string.length等于60，当n等于58时
     if (n < string.length - 1) {
@@ -53,3 +69,5 @@ const step = function () {
 };
 
 step();
+
+console.log(style);
